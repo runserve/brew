@@ -1,0 +1,25 @@
+#!/bin/bash
+
+ver='0.0.2'
+version="v$ver"
+wget -O $version.tar.gz https://github.com/runserve/runserve/archive/$version.tar.gz
+sha256=$(shasum -a 256 ./$version.tar.gz | awk '{print $1;}')
+echo $sha256
+
+
+echo "class Runserve < Formula" > runserve.rb
+echo "  desc 'NodeJS Docker Development Environment'" >> runserve.rb
+echo "  homepage "https://runserve.io"" >> runserve.rb
+echo "  version $ver" >> runserve.rb
+echo "  url 'https://github.com/runserve/runserve/archive/$version.tar.gz'" >> runserve.rb
+echo "  sha256 $sha256" >> runserve.rb
+echo "	def install" >> runserve.rb
+echo "		bin.install 'runserve'" >> runserve.rb
+echo "	end" >> runserve.rb
+echo "end" >> runserve.rb
+
+git add .
+git commit -m "$version"
+git push
+git tag $version
+git push origin $version
