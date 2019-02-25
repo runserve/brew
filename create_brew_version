@@ -19,6 +19,7 @@ echo "		bin.install 'runserve'" >> runserve.rb
 echo "	end" >> runserve.rb
 echo " "
 echo "end" >> runserve.rb
+echo " "
 
 git add .
 git commit -m "$version"
