@@ -1,6 +1,6 @@
 #!/bin/bash
 
-ver='0.0.2'
+ver=$(cat ./../runserve/runserve.latest)
 version="v$ver"
 wget -O $version.tar.gz https://github.com/runserve/runserve/archive/$version.tar.gz
 sha256=$(shasum -a 256 ./$version.tar.gz | awk '{print $1;}')
