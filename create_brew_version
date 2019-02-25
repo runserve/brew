@@ -12,10 +12,12 @@ echo "  desc 'NodeJS Docker Development Environment'" >> runserve.rb
 echo "  homepage "https://runserve.io"" >> runserve.rb
 echo "  version '$ver'" >> runserve.rb
 echo "  url 'https://github.com/runserve/runserve/archive/$version.tar.gz'" >> runserve.rb
+echo " "
 echo "  sha256 '$sha256'" >> runserve.rb
 echo "	def install" >> runserve.rb
 echo "		bin.install 'runserve'" >> runserve.rb
 echo "	end" >> runserve.rb
+echo " "
 echo "end" >> runserve.rb
 
 git add .
