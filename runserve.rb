@@ -3,7 +3,7 @@ class Runserve < Formula
   homepage 'https://runserve.io'
   version '0.0.3'
   url 'https://github.com/runserve/runserve/archive/v0.0.3.tar.gz'
-  sha256 'e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855'
+  sha256 '149e586a741371fa44bb2cb3a30f1b8f65a3ecdb11f91ad23acc4045e7f34e17'
 	def install
 		bin.install 'runserve'
 	end
