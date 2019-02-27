@@ -1,9 +1,9 @@
 class Runserve < Formula
   desc 'NodeJS Docker Development Environment'
   homepage 'https://runserve.io'
-  version '0.0.5'
-  url 'https://github.com/runserve/runserve/archive/v0.0.5.tar.gz'
-  sha256 '2337c26e3f2cdf136a3158ec09f224b1a5adfeb23ea4cffedab5b83ffce4b976'
+  version '0.0.6'
+  url 'https://github.com/runserve/runserve/archive/v0.0.6.tar.gz'
+  sha256 '1f5a17358dd57276aad3538edcf38d584670898fd70d8cb5ada194313cda4db9'
 	def install
 		bin.install 'runserve'
 	end
